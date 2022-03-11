@@ -1,4 +1,5 @@
-﻿using CollaboratorRegisterApi.Interfaces.Services;
+﻿using CollaboratorRegisterApi.Config;
+using CollaboratorRegisterApi.Interfaces.Services;
 using CollaboratorRegisterApi.Models.Requests;
 using CollaboratorRegisterApi.Models.Responses;
 using Microsoft.AspNetCore.Http;
@@ -35,6 +36,7 @@ namespace CollaboratorRegisterApi.Controllers
         /// <response code="201">Retorna quando o colaborador é criado com sucesso</response>  
         /// <response code="409">Retorna quando a validação falha</response>
         [HttpPut]
+        [ApiKey]
         [ProducesResponseType(typeof(BaseResponse), StatusCodes.Status201Created)]
         [ProducesResponseType(typeof(BaseResponse), StatusCodes.Status409Conflict)]
         public async Task<IActionResult> Add([FromBody] CollaboratorAddRequest request)
@@ -58,6 +60,7 @@ namespace CollaboratorRegisterApi.Controllers
         /// <response code="200">Retorna quando o colaborador é atualizado com sucesso</response>  
         /// <response code="409">Retorna quando a validação falha</response>
         [HttpPatch]
+        [ApiKey]
         [ProducesResponseType(typeof(BaseResponse), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BaseResponse), StatusCodes.Status409Conflict)]
         public async Task<IActionResult> Update([FromBody] CollaboratorUpdateRequest request)
@@ -81,6 +84,7 @@ namespace CollaboratorRegisterApi.Controllers
         /// <response code="200">Retorna quando o colaborador é excluido com sucesso</response>  
         /// <response code="409">Retorna quando a validação falha</response>
         [HttpDelete]
+        [ApiKey]
         [ProducesResponseType(typeof(BaseResponse), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BaseResponse), StatusCodes.Status409Conflict)]
         public async Task<IActionResult> Delete([FromQuery] int collaboratorId)
@@ -105,6 +109,7 @@ namespace CollaboratorRegisterApi.Controllers
         /// <response code="200">Retorna quando a busca é feita com sucesso</response>  
         /// <response code="204">Retorna quando a busca não possui dados para retorno</response>
         [HttpGet]
+        [ApiKey]
         [ProducesResponseType(typeof(CollaboratorGetResponse), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(CollaboratorGetResponse), StatusCodes.Status204NoContent)]
         public async Task<IActionResult> Get([FromQuery] CollaboratorGetRequest request)
