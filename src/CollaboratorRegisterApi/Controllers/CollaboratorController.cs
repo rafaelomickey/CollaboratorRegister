@@ -57,7 +57,7 @@ namespace CollaboratorRegisterApi.Controllers
         /// <param name="request">CollaboratorUpdateRequest model para atualizar um colaborador existente</param>
         /// <response code="200">Retorna quando o colaborador é atualizado com sucesso</response>  
         /// <response code="409">Retorna quando a validação falha</response>
-        [HttpPost]
+        [HttpPatch]
         [ProducesResponseType(typeof(BaseResponse), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(BaseResponse), StatusCodes.Status409Conflict)]
         public async Task<IActionResult> Update([FromBody] CollaboratorUpdateRequest request)

@@ -7,3 +7,6 @@
 /src/CollaboratorRegisterApi/obj
 /test/CollaboratorRegisterTest/bin/Debug/net5.0
 /test/CollaboratorRegisterTest/obj
+/infra/database/Database/Database.dbmdl
+/infra/database/Database/Database.jfm
+/infra/database/Database/obj

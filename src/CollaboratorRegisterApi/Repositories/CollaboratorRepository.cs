@@ -111,7 +111,7 @@ namespace CollaboratorRegisterApi.Repositories
                 builder.Where("CLB_ID = @Id", new { Id = request.Id });
 
             if (!string.IsNullOrEmpty(request.PlateNumber))
-                builder.Where("CLB_PLATE_NUMBER = @PlateNumber", new { Id = request.PlateNumber });
+                builder.Where("CLB_PLATE_NUMBER = @PlateNumber", new { PlateNumber = request.PlateNumber });
 
             if (request.LeaderId != null)
                 builder.Where("CLB_LEADER_ID = @LeaderId", new { LeaderId = request.LeaderId });
