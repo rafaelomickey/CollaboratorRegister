@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "d2d1297d-26d5-48f5-af47-12fabdb2065d",
+		"name": "CollaboratorRegisterApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44392/v1/collaborator",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44392",
+					"path": [
+						"v1",
+						"collaborator"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListarComParametros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44392/v1/collaborator?Id=2&LeaderId=1&PlateNumber=N11131",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44392",
+					"path": [
+						"v1",
+						"collaborator"
+					],
+					"query": [
+						{
+							"key": "Id",
+							"value": "2"
+						},
+						{
+							"key": "LeaderId",
+							"value": "1"
+						},
+						{
+							"key": "PlateNumber",
+							"value": "N11131"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44392/v1/collaborator?collaboratorId=2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44392",
+					"path": [
+						"v1",
+						"collaborator"
+					],
+					"query": [
+						{
+							"key": "collaboratorId",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Incluir",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Joao\",\r\n  \"mail\": \"joao@j.com\",\r\n  \"plateNumber\": \"N123531\",\r\n  \"phones\": [\r\n    {\r\n      \"description\": \"Celular\",\r\n      \"number\": \"1198000023222\"\r\n    }\r\n  ],\r\n  \"password\": \"Teste@123\",\r\n  \"leaderId\": 1\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44392/v1/collaborator",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44392",
+					"path": [
+						"v1",
+						"collaborator"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 6,\r\n  \"name\": \"Joao\",\r\n  \"mail\": \"joao@j.com\",\r\n  \"plateNumber\": \"N123531\",\r\n  \"phones\": [\r\n    {\r\n      \"description\": \"Celular alterado\",\r\n      \"number\": \"1198000023222\"\r\n    }\r\n  ],\r\n  \"password\": \"Teste@123\",\r\n  \"leaderId\": 1\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44392/v1/collaborator",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44392",
+					"path": [
+						"v1",
+						"collaborator"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
