@@ -11,3 +11,6 @@
 /infra/database/Database/Database.jfm
 /infra/database/Database/obj
 /infra/database/Database/bin
+/infra/database/Database/bin/Debug
+/infra/database/Database/bin/Debug/Database.dll
+/infra/database/Database/bin/Debug/Database.pdb
