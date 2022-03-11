@@ -49,7 +49,7 @@ namespace CollaboratorRegisterApi
                     Name = "Authorization",
                     In = ParameterLocation.Header,
                     Type = SecuritySchemeType.ApiKey,
-                    Scheme = "ApiKey"
+                    Scheme = "Bearer"
                 });
                 s.AddSecurityRequirement(new OpenApiSecurityRequirement{{
                     new OpenApiSecurityScheme
@@ -57,7 +57,7 @@ namespace CollaboratorRegisterApi
                         Reference = new OpenApiReference
                         {
                             Type = ReferenceType.SecurityScheme,
-                            Id = "ApiKey"
+                            Id = "Bearer"
                         }
                     },
                     Array.Empty<string>()
