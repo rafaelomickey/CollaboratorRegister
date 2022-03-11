@@ -3,3 +3,7 @@
 ################################################################################
 
 /.vs/CollaboratorRegister
+/src/CollaboratorRegisterApi/bin/Debug/net5.0
+/src/CollaboratorRegisterApi/obj
+/test/CollaboratorRegisterTest/bin/Debug/net5.0
+/test/CollaboratorRegisterTest/obj

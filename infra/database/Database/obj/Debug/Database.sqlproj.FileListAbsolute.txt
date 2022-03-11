@@ -1,0 +1,6 @@
+C:\Users\resource\source\repos\CollaboratorRegister\infra\database\Database\bin\Debug\Database.dacpac
+C:\Users\resource\source\repos\CollaboratorRegister\infra\database\Database\bin\Debug\Database.dll
+C:\Users\resource\source\repos\CollaboratorRegister\infra\database\Database\bin\Debug\Database.pdb
+C:\Users\resource\source\repos\CollaboratorRegister\infra\database\Database\obj\Debug\Database.dll
+C:\Users\resource\source\repos\CollaboratorRegister\infra\database\Database\obj\Debug\Database.pdb
+C:\Users\resource\source\repos\CollaboratorRegister\infra\database\Database\obj\Debug\Database.sqlproj.AssemblyReference.cache
